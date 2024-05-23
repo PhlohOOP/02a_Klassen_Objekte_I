@@ -19,11 +19,19 @@ public class App {
         //Werte ausgeben
         // output(); // --> Fehler und nicht undefined wie bei JS, da ein bereits definierter Typ erwartet wird (untypisiert <-> typisiert)
         // output(null); // null --> leere Objektreferenz (geht als einziges abgesehen vom akzeptierten Argument(hier wird String erwartet))
-        output(cat1.name);
-        output(cat1.furColor);
-        output(Integer.toString(cat1.age)); // Typkonvertierung // output(String.valueOf(cat1.age)); // kommt zum selben Ergebnis
+        // ## das hier erreicht nun die privaten Variablen nicht mehr in den Objekten - Getter benutzen
+        // output(cat1.name);
+        //output(cat1.furColor);
+        //output(Integer.toString(cat1.age)); // Typkonvertierung // output(String.valueOf(cat1.age)); // kommt zum selben Ergebnis
         
-        // output("---------------------");
+        output(cat1.getName());
+        output(cat1.getFurColor());
+        output(Integer.toString(cat1.getAge()));
+
+        cat1.setFurColor("Checkered");
+        output(cat1.getFurColor());
+
+        output("---------------------");
 
         Cat cat2 = new Cat("Alonzo", "Grey", 35);
         output("Blick von aussen: " + cat2);
@@ -37,9 +45,9 @@ public class App {
         //Werte ausgeben
         // output(); // --> Fehler und nicht undefined wie bei JS, da ein bereits definierter Typ erwartet wird (untypisiert <-> typisiert)
         // output(null); // null --> leere Objektreferenz (geht als einziges abgesehen vom akzeptierten Argument(hier wird String erwartet))
-        output(cat2.name);
-        output(cat2.furColor);
-        output(Integer.toString(cat2.age)); // Typkonvertierung // output(String.valueOf(cat1.age)); // kommt zum selben Ergebnis
+        output(cat2.getName());
+        output(cat2.getFurColor());
+        output(Integer.toString(cat2.getAge())); // Typkonvertierung // output(String.valueOf(cat1.age)); // kommt zum selben Ergebnis
 
     }
     // statische Methode die in der Klasse ausgeführt wird
