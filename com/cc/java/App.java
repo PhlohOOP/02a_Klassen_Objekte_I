@@ -7,14 +7,14 @@ public class App {
         // Cat --> Referenztyp (Klasse aus dem das Objekt gebildet wird)
         // cat1 --> Referenzvariable (hält die Adresse zum Objekt (im RAM bzw. Heap))
 
-        Cat cat1 = new Cat(); // Instanziierung >> Objekt
+        Cat cat1 = new Cat("Grizabella", "White", 29); // Instanziierung >> Objekt
         output("Blick von aussen: " + cat1); // Adresse des Objekts
         output("Blick von innen: " + cat1.getInstanceVar());
 
-        //Werte zuweisen
-        cat1.name = "Grizabella";
-        cat1.furColor = "White";
-        cat1.age = 29;
+        //Werte zuweisen (händisch) -> Custom Constructor is the way to go -_>
+        // cat1.name = "Grizabella";
+        // cat1.furColor = "White";
+        // cat1.age = 29;
 
         //Werte ausgeben
         // output(); // --> Fehler und nicht undefined wie bei JS, da ein bereits definierter Typ erwartet wird (untypisiert <-> typisiert)
@@ -25,14 +25,14 @@ public class App {
         
         // output("---------------------");
 
-        Cat cat2 = new Cat();
+        Cat cat2 = new Cat("Alonzo", "Grey", 35);
         output("Blick von aussen: " + cat2);
         output("Blick von innen: " + cat2.getInstanceVar());
 
-        //Werte zuweisen
-        cat2.name = "Alonzo";
-        cat2.furColor = "Grey";
-        cat2.age = 35;
+        //Werte zuweisen (händisch)
+        // cat2.name = "Alonzo";
+        // cat2.furColor = "Grey";
+        // cat2.age = 35;
 
         //Werte ausgeben
         // output(); // --> Fehler und nicht undefined wie bei JS, da ein bereits definierter Typ erwartet wird (untypisiert <-> typisiert)
